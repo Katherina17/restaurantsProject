@@ -1,0 +1,29 @@
+.cuisine-list{
+    width: 18rem;
+}
+
+.cuisine-list h2{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.cuisine-item{
+    display: flex;
+    margin: 12px;
+    background-color: #e4aa1eeb;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.cuisine-item label{
+    margin-left: 8px;
+}
+
+.cuisine-item input{
+    margin: 3px;
+    align-items: center;
+}
+
+.cuisine-item:active{
+    border-radius: 2px black solid;
+}
