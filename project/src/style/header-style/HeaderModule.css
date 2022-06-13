@@ -1,0 +1,23 @@
+header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#header-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-header{
+    align-items: center;
+}
+
+.person-Icon{
+    margin-right: 10px;
+}
+
