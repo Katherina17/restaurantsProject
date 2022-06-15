@@ -1,5 +1,6 @@
 import './Cuisine.css';
 import Button from '../../ui/Button.jsx';
+import { height } from '@mui/system';
 
 const cuisines = [
     {id: 'asian', name: 'АЗИАТСКАЯ КУХНЯ'},
@@ -26,7 +27,9 @@ function Cuisine(props){
         <section className="cuisine-list">
         <h2>КУХНИ</h2>
         {renderCuisines}
-        <Button>Применить</Button>
+        <div id='AcceptBtn'>
+            <Button style={{height: 32 + 'px', width: 196 + 'px',}}>ПРИМЕНИТЬ</Button>
+        </div>
     </section>
     )
    

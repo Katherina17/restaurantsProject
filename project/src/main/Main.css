@@ -5,3 +5,8 @@ main{
     font-family: 'Roboto', sans-serif;
     padding-top: 2rem;
 }
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+}

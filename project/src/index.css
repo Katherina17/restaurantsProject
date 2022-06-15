@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
 /*Обнуление*/
 *{
 	padding: 0;
@@ -37,7 +39,12 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
-.bigred{
-	font-size: 20px;
-	color: red;
+button{
+	font-family: 'Roboto', sans-serif;
 }
+
+p, h1,h2,h3{
+	letter-spacing: 0.06em;
+    line-height: 130%;
+}
+
