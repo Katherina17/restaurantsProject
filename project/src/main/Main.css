@@ -4,6 +4,7 @@ main{
     background-color: #fafafa;
     font-family: 'Roboto', sans-serif;
     padding-top: 2rem;
+    height: auto;
 }
 
 .mainContainer{

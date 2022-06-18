@@ -25,11 +25,13 @@ const renderCuisines = cuisines.map(item => {
 function Cuisine(props){
     return(
         <section className="cuisine-list">
-        <h2>КУХНИ</h2>
-        {renderCuisines}
-        <div id='AcceptBtn'>
-            <Button style={{height: 32 + 'px', width: 196 + 'px',}}>ПРИМЕНИТЬ</Button>
-        </div>
+            <div style={{position: 'sticky', top: '10' + 'px'}}>
+                <h2>КУХНИ</h2>
+                {renderCuisines}
+                <div id='AcceptBtn'>
+                    <Button style={{height: 32 + 'px', width: 196 + 'px',}}>ПРИМЕНИТЬ</Button>
+                </div>
+            </div>
     </section>
     )
    

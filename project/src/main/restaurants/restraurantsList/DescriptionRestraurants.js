@@ -1,3 +1,13 @@
+import imageSrcMama from '../../../assets/mamaHuana.jpg';
+import imageSrcGarage from '../../../assets/garage.jpg';
+import imageSrcSevenFridays from '../../../assets/sevenFridays.jpg';
+import imageSrcCicava from '../../../assets/cicava.jpg';
+import imageSrcOltre from '../../../assets/oltre.jpg';
+import imageSrcFaSol from '../../../assets/FaSol.jpg';
+import imageSrcWok from '../../../assets/wok.jpg';
+import imageSrcTabo from '../../../assets/tabo.jpg';
+import imageSrcYummy from '../../../assets/yummy.jpg';
+
 const descriptionRestraurants = [
     {
         name: 'МАМА ХУАНА',
@@ -5,7 +15,7 @@ const descriptionRestraurants = [
         deliveryTime: '75 мин',
         rate: '4.2',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/mamaHuana.jpg').default
+        img: imageSrcMama
     },
     {
         name: 'CAFE GARAGE',
@@ -13,7 +23,7 @@ const descriptionRestraurants = [
         deliveryTime: '35 мин',
         rate: '4.1',
         delivery: 'Доставка от 17 руб',
-        img: require('../../../assets/garage.jpg').default
+        img: imageSrcGarage
     },
     {
         name: '7 Пятниц',
@@ -21,7 +31,7 @@ const descriptionRestraurants = [
         deliveryTime: '75 мин',
         rate: '4',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/sevenFridays.jpg').default
+        img: imageSrcSevenFridays
     },
     {
         name: 'Заўжды ЦiкаVa',
@@ -29,7 +39,7 @@ const descriptionRestraurants = [
         deliveryTime: '105 мин',
         rate: '5',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/cicava.jpg').default
+        img: imageSrcCicava
     },
     {
         name: 'Oltre',
@@ -37,7 +47,7 @@ const descriptionRestraurants = [
         deliveryTime: '75 мин',
         rate: '4.7',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/oltre.jpg').default
+        img: imageSrcOltre
     },
     {
         name: 'ФаСоль',
@@ -45,7 +55,7 @@ const descriptionRestraurants = [
         deliveryTime: '75 мин',
         rate: '4.6',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/FaSol.jpg').default
+        img: imageSrcFaSol
     },
     {
         name: 'WOK Dragon',
@@ -53,7 +63,7 @@ const descriptionRestraurants = [
         deliveryTime: '75 мин',
         rate: '4.3',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/wok.jpg').default
+        img: imageSrcWok
     },
     {
         name: 'Табу',
@@ -61,7 +71,7 @@ const descriptionRestraurants = [
         deliveryTime: '75 мин',
         rate: '4.6',
         delivery: 'Доставка от 10 руб',
-        img: require('../../../assets/tabo.jpg').default
+        img: imageSrcTabo
     },
     {
         name: 'YummY',
@@ -69,21 +79,9 @@ const descriptionRestraurants = [
         deliveryTime: '40 мин',
         rate: '3.4',
         delivery: 'Доставка от 12.90 руб',
-        img: require('../../../assets/yummy.jpg').default
+        img: imageSrcYummy
     }
 ]
-
-/*descriptionRestraurants.sort(function(a,b){
-    let nameA = a.name.toLowelCase();
-    let nameB = b.name.toLowelCase();
-    if(nameA > nameB){
-        return -1;
-    } else if(nameB > nameA){
-        return 1;
-    } else {
-        return 0;
-    }
-})*/
 
 export default descriptionRestraurants;
 
