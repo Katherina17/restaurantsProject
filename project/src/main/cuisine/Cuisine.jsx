@@ -15,9 +15,9 @@ const cuisines = [
 
 const renderCuisines = cuisines.map(item => {
     return (
-        <div className="cuisine-item">
+        <div className="cuisine-item" key={item.id}>
             <input type='checkbox' id={item.id}/>
-            <label for={item.id}>{item.name.toUpperCase()}</label>
+            <label htmlFor={item.id}>{item.name.toUpperCase()}</label>
         </div>
     )
 });

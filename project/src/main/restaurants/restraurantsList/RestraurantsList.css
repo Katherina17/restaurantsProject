@@ -3,6 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 25px;
+    margin-bottom: 30px;
 }
 
 .RestraurantsList img{
@@ -15,13 +16,24 @@
 
 .RestraurantsItem{
     background-color: #fff;
-    height: 23rem;
+    height: 23.5rem;
     border-radius: 1rem;
     box-shadow: -1px -1px 9px #0000002b;
     transition: all .2s ease-in-out;
 }
 
 .RestraurantsItem:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
+@media(max-width: 1280px){
+    .RestraurantsList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 940px){
+    .RestraurantsList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
