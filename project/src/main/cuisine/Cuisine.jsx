@@ -25,7 +25,7 @@ const renderCuisines = cuisines.map(item => {
 function Cuisine(props){
     return(
         <section className="cuisine-list">
-            <div style={{position: 'sticky', top: '10' + 'px'}}>
+            <div style={{position: 'sticky', top: '70' + 'px'}}>
                 <h2>КУХНИ</h2>
                 {renderCuisines}
                 <div id='AcceptBtn'>

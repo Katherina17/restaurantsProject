@@ -9,8 +9,8 @@ function Nav(){
     return (
         <ThemeProvider theme = {theme}>
             <nav>
-                <PersonOutlineOutlinedIcon className='person-Icon' sx={{ fontSize: 33, marginRight: '10px'}} color="secondary" />
-                <ShoppingBasketOutlinedIcon  sx={{ fontSize: 33}} color="secondary" />
+                <PersonOutlineOutlinedIcon className='person-Icon' sx={{ fontSize: 33, marginRight: '10px', cursor: 'pointer'}} color="secondary" />
+                <ShoppingBasketOutlinedIcon  sx={{ fontSize: 33, cursor: 'pointer'}} color="secondary" />
             </nav>
         </ThemeProvider>
     )
