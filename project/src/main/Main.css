@@ -4,7 +4,8 @@ main{
     background-color: #fafafa;
     font-family: 'Roboto', sans-serif;
     padding-top: 2rem;
-    height: auto;
+    height: 1200px;
+    padding-bottom: 3rem;
 }
 
 .mainContainer{

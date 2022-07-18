@@ -1,0 +1,8 @@
+.dishList{
+    width: 77%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    gap: 2rem;
+
+}

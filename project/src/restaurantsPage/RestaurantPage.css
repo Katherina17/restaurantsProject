@@ -1,0 +1,13 @@
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.orderList{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+}
+

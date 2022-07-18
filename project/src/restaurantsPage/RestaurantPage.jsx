@@ -1,24 +1,22 @@
-import './MenuPage.css';
+import './RestaurantPage.css';
 import { useParams} from 'react-router-dom';
 import DescriptionRestraurants from '../main/restaurants/restraurantsList/DescriptionRestraurants.js';
-import MenuItem from './MenuItem.jsx';
-import DishItem from './DishItem';
+import RestaurantHeader from './RestaurantHeader.jsx';
+import DishItem from './DishItem.jsx';
+import DishList from './DishList';
+import Basket from './Basket';
 
-function MenuPage(props){
+
+function RestaurantPage(props){
     const {id} = useParams();
     let currentRestaurant = DescriptionRestraurants.find(item => item.id === id);
 
     let renderCuisine = currentRestaurant.cuisines.map(item =>{
         return (
-            <p> {item['cuisine']}</p>
+            <p key={item.cuisine}> {item['cuisine']}</p>
         )
     })
 
-    let renderDish = currentRestaurant.cuisines.map( item => {
-       
-      
-    })
-   
     if (currentRestaurant === undefined) {
         return(
             <div>error</div>
@@ -27,9 +25,10 @@ function MenuPage(props){
     
     return(
         <main>
-            <section>
-                <div>
-                    <MenuItem img={currentRestaurant.img}
+            <section className='menuContainer wrapper'>
+                <div className='orderList'>
+                    <Basket/>
+                    <RestaurantHeader img={currentRestaurant.img}
                                 deliveryTime = {currentRestaurant.deliveryTime}
                                 name = {currentRestaurant.name}
                                 delivery = {currentRestaurant.delivery}
@@ -37,11 +36,11 @@ function MenuPage(props){
                                 timeWork = {currentRestaurant.schedule}
                                 cuisine = {renderCuisine}
                                 />
-                <DishItem dish = {renderDish}/>   
                 </div>
+                <DishList cuisines={currentRestaurant.cuisines}/>
             </section>
         </main>
     );
 }
 
-export default MenuPage;
+export default RestaurantPage;

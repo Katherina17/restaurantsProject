@@ -43,7 +43,7 @@ button{
 	font-family: 'Roboto', sans-serif;
 }
 
-p, h1,h2,h3{
+p, h1,h2,h3, span{
 	letter-spacing: 0.06em;
     line-height: 130%;
 }

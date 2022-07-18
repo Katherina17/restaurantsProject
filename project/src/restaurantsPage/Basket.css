@@ -1,0 +1,31 @@
+.basketContainer{
+    background-color: rgb(255, 255, 255);
+    height: 29rem;
+    position: fixed;
+    right: 15rem;
+    min-width: 20rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px #0000002b;
+}
+
+.Order{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0 0 2px #0000002b;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-weight: 600;
+    margin-bottom: 7rem;
+    padding: 8px 0;
+}
+
+.basket{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    opacity: 0.6;
+}

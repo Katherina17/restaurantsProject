@@ -1,14 +1,14 @@
-import './MenuItem.css';
+import './RestaurantHeader.css';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import {ThemeProvider} from '@mui/material/styles';
 import theme from '../header/nav/CreateTheme.js';
 
 
-function MenuItem(props){
+function RestaurantHeader(props){
     return (
         <ThemeProvider theme={theme}>
-              <div className='container wrapper'>
+              <div className='container'>
                     <div className='rest-desc'>
                         <img src={props.img} alt={props.name}/>
                         <div className='textContainer'>
@@ -18,18 +18,18 @@ function MenuItem(props){
                             <div className='deliveryContainer'>
                                 <div className='deliveryTime'>
                                     <WatchLaterIcon fontSize='medium' color="primary" style={{marginRight: '0.4' + 'rem'}} />
-                                    <p>{props.deliveryTime}</p>
+                                    <span>{props.deliveryTime}</span>
                                 </div>
                                 <div className='delivery'>
-                                    <p>{props.delivery}</p>
+                                    <span>{props.delivery}</span>
                                 </div>
                             </div>
                             <div className='timeWork'>
-                                <p >{props.timeWork}</p>
+                                <span >{props.timeWork}</span>
                             </div>
-                            <div className='rate'>
+                            <div className='rating'>
                                 <StarRateIcon color="primary" style={{marginRight: '0.2' + 'rem'}}/>
-                                <p style={{marginRight: '0.4' + 'rem'}}>{props.rate}</p>
+                                <span style={{marginRight: '0.4' + 'rem'}}>{props.rate}</span>
                             </div>
                         </div>
                     </div>
@@ -41,6 +41,6 @@ function MenuItem(props){
     )
 }
 
-export default MenuItem;
+export default RestaurantHeader;
 
 
