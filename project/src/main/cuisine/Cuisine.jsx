@@ -1,12 +1,10 @@
 import './Cuisine.css';
 import Button from '../../ui/Button.jsx';
-import { height } from '@mui/system';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import {filterCuisine} from '../../store/cuisineSlice.js';
-import React, { useRef } from 'react';
+import {filterCuisines} from '../../redux/cuisineSlice.js';
 import CheckBox from './CheckBox';
-
+import {filterRests} from '../../redux/filterRestsSlice';
 
 
 const cuisines = [
@@ -33,13 +31,14 @@ const renderCuisines = () => cuisines.map(item => {
 });
 
 function Cuisine(){
+    const dispatch = useDispatch();
     return(
         <section className="cuisine-list">
             <div style={{position: 'sticky', top: '70' + 'px'}}>
                 <h2>КУХНИ</h2>
                 {renderCuisines()}
                 <div id='AcceptBtn'>
-                    <Button style={{height: 32 + 'px', width: 196 + 'px',}} >ПРИМЕНИТЬ</Button>
+                    <Button style={{height: 32 + 'px', width: 196 + 'px',}} onClick={() => dispatch(filterRests())} >ПРИМЕНИТЬ</Button>
                 </div>
             </div>
     </section>

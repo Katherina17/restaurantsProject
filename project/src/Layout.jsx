@@ -4,7 +4,7 @@ import Main from './main/Main';
 import App from './App';
 import Footer from './footer/Footer';
 import {Provider} from 'react-redux';
-import store from './store';
+import store from './redux';
 
 function Layout() {
   return (

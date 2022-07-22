@@ -13,6 +13,6 @@ const cuisineSlice = createSlice({
 
 });
 
-export const {filterCuisine} = cuisineSlice.actions;
+export const {filterCuisines} = cuisineSlice.actions;
 
 export default cuisineSlice.reducer;
