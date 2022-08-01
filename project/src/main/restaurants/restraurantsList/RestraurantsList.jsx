@@ -1,11 +1,42 @@
 import descriptionRestraurants from './DescriptionRestraurants.js';
 import '../restraurantsList/RestraurantsList.css';
 import RestraurantItem from './RestraurantItem.jsx';
-import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import store from '../../../redux';
 import { useEffect } from 'react';
+
+function filterByTime(rest, curHours, curMinutes) {
+    let timeFrom = rest.scheduleFrom.split(':');
+    let timeFromHours = Number(timeFrom[0]);
+    let timeFromMin = Number(timeFrom[1]);
+
+    let timeTo = rest.scheduleTo.split(':');
+    let timeToHours = Number(timeTo[0]);
+    let timeToMin = Number(timeTo[1]);
+
+    let isOverStartTime = false;
+
+    if(curHours > timeFromHours){
+        isOverStartTime =  true;
+    } else if(curHours === timeFromHours){
+        if(curMinutes >= timeFromMin){
+            isOverStartTime =  true;
+        }
+    }
+
+    let isUnderFinishTime = false;
+
+    if (curHours < timeToHours){
+        isUnderFinishTime = true;
+    } else if(curHours === timeToHours){
+        if(curMinutes <= timeToMin){
+            isUnderFinishTime = true;
+        }
+    }
+
+    return isOverStartTime && isUnderFinishTime;
+
+}
 
 function RestraurantsList(props){
     let cuisines = useSelector(state => state.cuisine.cuisines);
@@ -14,7 +45,7 @@ function RestraurantsList(props){
     
 
     function filterRestraunts() {
-        if(cuisines.length != 0) {
+        if(cuisines.length !== 0) {
             let newRests = descriptionRestraurants.filter(rest => {
                 for(let c of cuisines) {
                     for(let cRest of rest['cuisines']) {
@@ -31,6 +62,25 @@ function RestraurantsList(props){
             setRests(descriptionRestraurants);
         }
     }
+
+    let timeState = useSelector(state => state.time.timeState);
+
+    function filterRestrauntsByTime(){
+        if(timeState === false){
+            let date = new Date();
+            let currentHours = date.getUTCHours()+ 3;
+            currentHours = (currentHours < 6) ? currentHours + 24 : currentHours;
+            let currentMins = date.getUTCMinutes();
+            let newRest = descriptionRestraurants.filter(item => filterByTime(item, currentHours, currentMins));
+            setRests(newRest)
+            }
+             else {
+                setRests(descriptionRestraurants)
+            }
+    }
+
+    useEffect(filterRestrauntsByTime, [timeState])
+
 
     let [rests, setRests] = useState(descriptionRestraurants);
 

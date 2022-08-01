@@ -1,6 +1,5 @@
 import './Cuisine.css';
 import Button from '../../ui/Button.jsx';
-import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import {filterCuisines} from '../../redux/cuisineSlice.js';
 import CheckBox from './CheckBox';
@@ -22,11 +21,10 @@ function Cuisine(){
     let dispatch = useDispatch();
 
     function addOrRemoveCuisine(cuisine) {
-        if(currentCuisines.find(c => c === cuisine) !== undefined) {
-            setCuisines(currentCuisines.filter(c => c !== cuisine));
-        }
-        else {
-            setCuisines(currentCuisines.concat([cuisine]));
+        if(currentCuisines.find(c => c === cuisine)){
+            setCuisines(currentCuisines.filter(c => c !== cuisine))
+        } else {
+            setCuisines(currentCuisines.concat(cuisine))
         }
     }
 

@@ -8,6 +8,7 @@ import './RestraurantItem.css';
 
 
 const RestraurantItem = (props) => {
+
     return (
         <ThemeProvider theme={theme}>
             <Link to={`/restaurant/${props.id}`}>
