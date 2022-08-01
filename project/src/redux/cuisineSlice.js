@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import descriptionRestraurants from "../main/restaurants/restraurantsList/DescriptionRestraurants";
 
 const cuisineSlice = createSlice({
     name: 'cuisine',
     initialState: {
-        cuisines: []
+        cuisines: [], 
     },
     reducers: {
         filterCuisines(state, action){
-            state.cuisines.push(action.payload);
-        },
+            state.cuisines = action.payload;
+        }
     }
 
 });

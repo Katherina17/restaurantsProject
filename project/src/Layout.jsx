@@ -4,17 +4,17 @@ import Main from './main/Main';
 import App from './App';
 import Footer from './footer/Footer';
 import {Provider} from 'react-redux';
-import store from './redux';
+import store from './redux/index.js';
 
 function Layout() {
   return (
     <>
     <Provider store={store}>
-        <Header/>
-        <Outlet>
+      <Header/>
+      <Outlet>
         <Main/>
-        </Outlet>
-        <Footer/>
+      </Outlet>
+      <Footer/>
     </Provider>
 
     </>
