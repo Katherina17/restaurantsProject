@@ -6,14 +6,20 @@ Button{
     border-radius: 30px;
     letter-spacing: 0.06em;
     line-height: 130%;
+    transition: all 0.3s ease-in-out;
+
 }
 
 button:hover{
     background-color: #f7b621;
+    transition: all 0.4s ease-in-out;
 }
 
 button:active{
     background-color: #e1a823;
-    transition: all 0.2s;
-
+}
+.btn-style{
+    padding: 0 0.8rem;
+    max-height: 18px;
+    overflow: hidden;
 }

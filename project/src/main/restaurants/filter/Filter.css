@@ -13,3 +13,18 @@
 .filter button:first-child{
     margin-right: 18px;
 }
+
+.filter button:nth-child(2){
+    margin-right: 18px;
+}
+
+.mobileCuisines{
+    display: none;
+}
+
+@media(max-width: 710px){
+    .mobileCuisines{
+        display: block;
+        background-color: #dfdfdf;
+    }
+}

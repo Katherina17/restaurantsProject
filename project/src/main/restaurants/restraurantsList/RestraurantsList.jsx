@@ -40,13 +40,15 @@ function filterByTime(rest, curHours, curMinutes) {
 
 function RestraurantsList(props){
     let cuisines = useSelector(state => state.cuisine.cuisines);
+    let timeState = useSelector(state => state.time.timeState);
 
-    useEffect(filterRestraunts, [cuisines]);
-    
+    useEffect(commonFilter, [cuisines, timeState]);
 
-    function filterRestraunts() {
+    let [rests, setRests] = useState(descriptionRestraurants);
+
+    function filterRestraunts(rests) {
         if(cuisines.length !== 0) {
-            let newRests = descriptionRestraurants.filter(rest => {
+            let newRests = rests.filter(rest => {
                 for(let c of cuisines) {
                     for(let cRest of rest['cuisines']) {
                         if(c === cRest['cuisine'].toUpperCase()) {
@@ -56,33 +58,35 @@ function RestraurantsList(props){
                  }
                  return false;
              });
-            setRests(newRests);
+            return newRests;
         }
         else {
-            setRests(descriptionRestraurants);
+            return rests;
         }
+        
     }
 
-    let timeState = useSelector(state => state.time.timeState);
-
-    function filterRestrauntsByTime(){
+    function filterRestrauntsByTime(rests){
         if(timeState === false){
             let date = new Date();
             let currentHours = date.getUTCHours()+ 3;
             currentHours = (currentHours < 6) ? currentHours + 24 : currentHours;
             let currentMins = date.getUTCMinutes();
-            let newRest = descriptionRestraurants.filter(item => filterByTime(item, currentHours, currentMins));
-            setRests(newRest)
-            }
-             else {
-                setRests(descriptionRestraurants)
-            }
+            let newRest = rests.filter(item => filterByTime(item, currentHours, currentMins));
+            return newRest;
+        }
+        else {
+            return rests;
+        }
     }
 
-    useEffect(filterRestrauntsByTime, [timeState])
+    function commonFilter(){
+        let restsFilteredByTime = filterRestrauntsByTime(descriptionRestraurants);
+        let restsFilteredByTimeAndCuisines = filterRestraunts(restsFilteredByTime);
+        setRests(restsFilteredByTimeAndCuisines);
+    }
 
-
-    let [rests, setRests] = useState(descriptionRestraurants);
+  
 
     return(
         <section>

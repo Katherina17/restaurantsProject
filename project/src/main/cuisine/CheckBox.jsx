@@ -1,5 +1,3 @@
-import {filterCuisines} from '../../redux/cuisineSlice.js';
-
 function CheckBox({id, name, addOrRemoveCuisine}){
     return(
         <div className="cuisine-item">

@@ -77,3 +77,13 @@
     transition: 0.4 all ease-in-out;
 
 }
+
+@media (max-width: 412px){
+    .orderDish span{
+        font-size: 14px;
+    }
+
+    .textDish h3{
+        font-size: 14px;
+    }
+}

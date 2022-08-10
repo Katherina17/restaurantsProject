@@ -1,8 +1,7 @@
-import DescriptionRestraurants from './DescriptionRestraurants.js';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import {ThemeProvider} from '@mui/material/styles';
-import {Link, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import theme from '../../../header/nav/CreateTheme.js';
 import './RestraurantItem.css';
 

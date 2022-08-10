@@ -16,7 +16,7 @@ const cuisines = [
     {id: 'japanese', name: 'Японская кухня'}
 ];
 
-function Cuisine(){
+function Cuisine(props){
     let [currentCuisines, setCuisines] = useState([]);
     let dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ function Cuisine(){
 
     return(
         <section className="cuisine-list">
-            <div style={{position: 'sticky', top: '70' + 'px'}}>
+            <div style={{position: 'sticky', top: '70px'}}>
                 <h2>КУХНИ</h2>
                 {cuisines.map(item => {
                     return (
@@ -41,7 +41,10 @@ function Cuisine(){
                     )
                 })}
                 <div id='AcceptBtn'>
-                    <Button style={{height: 32 + 'px', width: 196 + 'px',}} onClick={() => dispatch(filterCuisines(currentCuisines))}>ПРИМЕНИТЬ</Button>
+                    <Button style={{height: 32 + 'px', width: 89 + '%',}} onClick={() => {
+                        dispatch(filterCuisines(currentCuisines));
+                        if(props.removePopUp) props.removePopUp();
+                    }}>ПРИМЕНИТЬ</Button>
                 </div>
             </div>
     </section>

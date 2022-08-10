@@ -1,13 +1,27 @@
 .menuContainer{
-    display: flex;
-    flex-direction: column;
-    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
 }
 
 .orderList{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: column;
     width: 100%;
+}
+
+@media (max-width: 1445px){
+    .menuContainer{
+        grid-template-columns: 1fr;
+    }
+
+    .mainRestPage{
+        height: 106rem;
+    }
+}
+
+@media (max-width: 767px){
+    .mainRestPage{
+        height: 131rem;
+    }
 }
 

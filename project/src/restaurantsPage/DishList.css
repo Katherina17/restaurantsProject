@@ -1,8 +1,20 @@
 .dishList{
-    width: 77%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-self: center;
     gap: 2rem;
 
+}
+
+@media (max-width: 1084px){
+    .dishList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px){
+    .dishList{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

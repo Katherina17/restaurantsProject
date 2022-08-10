@@ -4,11 +4,23 @@ main{
     background-color: #fafafa;
     font-family: 'Roboto', sans-serif;
     padding-top: 2rem;
-    height: 1200px;
+    height: 1200px; 
     padding-bottom: 3rem;
 }
 
 .mainContainer{
     display: flex;
     flex-direction: row;
+}
+
+@media(max-width: 1280px){
+    .mainHomePage{
+        height: 137rem;
+    }
+}
+
+@media(max-width: 941px){
+    .mainHomePage{
+        height: 237rem;
+    }
 }

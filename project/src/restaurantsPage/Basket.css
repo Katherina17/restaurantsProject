@@ -1,11 +1,12 @@
 .basketContainer{
     background-color: rgb(255, 255, 255);
     height: 29rem;
-    position: fixed;
-    right: 15rem;
     min-width: 20rem;
     border-radius: 1rem;
     box-shadow: 0 0 2px #0000002b;
+    margin-left: 2rem;
+    position: sticky;
+    top: 70px;
 }
 
 .Order{
@@ -28,4 +29,10 @@
     flex-direction: column-reverse;
     align-items: center;
     opacity: 0.6;
+}
+
+@media (max-width: 1445px){
+    .basketContainer{
+        display: none;
+    }
 }
