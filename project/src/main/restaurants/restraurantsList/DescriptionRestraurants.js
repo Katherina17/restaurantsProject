@@ -55,6 +55,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 12:00 до 23:30',
         cuisines: [{cuisine: 'Азиатская кухня',
                 dishes: [{
+                    category: 'Азиатская кухня',
                     dish: 'Бао с рваной свининой',
                     price: '17 руб',
                     weight: '265г',
@@ -62,6 +63,7 @@ const descriptionRestraurants = [
                     dishDescription: 'Азиатская булочка с обжаренными креветками в пряно-остром соусе, пряная морковь, огурцы, маринованный лук, помело и соус на основе майонеза и хрена.'
                 },
                 {
+                    category: 'Азиатская кухня',
                     dish: 'Бао с цыпленком',
                     price: '13 руб',
                     weight: '300г',
@@ -73,14 +75,14 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Американская кухня',
                 dishes: [
-                    {
+                    {   category: 'Американская кухня',
                         dish: 'Перуанская куриная грудка в зеленом соусе',
                         price: '18 руб',
                         weight: '550г',
                         img: imageChickenGreenSauce,
                         dishDescription: 'Куриная грудка с зеленым соусом с гарниром из обжаренной моркови с цукини.'
                     },
-                    {   
+                    {   category: 'Американская кухня',
                         dish: 'Алабами сэндвич с курицей',
                         price: '12.80 руб',
                         weight: '565г',
@@ -93,14 +95,14 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Европейская кухня',
                 dishes:[
-                    {
+                    {   category: 'Европейская кухня',
                         dish: 'Поке боул',
                         price: '16 руб',
                         weight: '380г',
                         img: imageBowlPoke,
                         dishDescription: 'Гавайское блюдо - которое состоит из риса, морепродуктов мидии и креветки, медовая морковь, броколли, спаржа, початки кукурузы, копченое яйцо.'
                     },
-                    {
+                    {   category: 'Европейская кухня',
                         dish: 'Французкий луковый суп',
                         price: '6 руб',
                         weight: '310г',
@@ -123,6 +125,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 10:00 до 22:00',
         cuisines: [{cuisine: 'Американская кухня',
                 dishes: [{
+                    category: 'Американская кухня',
                     dish: 'Бургер Терияки',
                     price: '15.40 руб',
                     weight: '300г',
@@ -134,7 +137,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Белорусская кухня',
                 dishes: [
-                    {
+                    {   category: 'Белорусская кухня',
                         dish: 'Драники с копченым лососем',
                         price: '17.40 руб',
                         weight: '150г',
@@ -146,7 +149,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Европейская кухня',
                 dishes:[
-                    {
+                    {   category: 'Европейская кухня',
                         dish: 'Тальятта из говядины со свежим салатом',
                         price: '28 руб',
                         weight: '250г',
@@ -158,7 +161,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Итальянская кухня',
                 dishes:[
-                    {
+                    {   category: 'Итальянская кухня',
                         dish: 'Паста с морепродуктами',
                         price: '16.70 руб',
                         weight: '320г',
@@ -182,6 +185,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 12:30 до 00:30',
         cuisines: [{cuisine: 'Американская кухня',
                 dishes: [{
+                    category: 'Американская кухня',
                     dish: 'Фиш бургер',
                     price: '18.50 руб',
                     weight: '220г',
@@ -193,7 +197,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Европейская кухня',
                 dishes: [
-                    {
+                    {   category: 'Европейская кухня',
                         dish: 'Ризотто Tiger',
                         price: '21 руб',
                         weight: '300г',
@@ -205,7 +209,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Итальянская кухня',
                 dishes:[
-                    {
+                    {   category: 'Итальянская кухня',
                         dish: 'Паста Pad Thai',
                         price: '24 руб',
                         weight: '360г',
@@ -217,7 +221,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Японская кухня',
                 dishes:[
-                    {
+                    {   category: 'Японская кухня',
                         dish: 'Ролл Mango Fila',
                         price: '19.50 руб',
                         weight: '330г',
@@ -241,6 +245,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 10:00 до 20:00',
         cuisines: [{cuisine: 'Американская кухня',
                 dishes: [{
+                    category: 'Американская кухня',
                     dish: 'Бургер с говяжьей котлетой',
                     price: '9.99 руб',
                     weight: '420г',
@@ -252,7 +257,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Азиатская кухня',
                 dishes: [
-                    {
+                    {   category: 'Азиатская кухня',
                         dish: 'Фунчоза с курицей',
                         price: '9.59 руб',
                         weight: '300г',
@@ -264,7 +269,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Европейская кухня',
                 dishes:[
-                    {
+                    {   category: 'Европейская кухня',
                         dish: 'Жареная копченая колбаса',
                         price: '9.59 руб',
                         weight: '410г',
@@ -276,7 +281,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Белорусская кухня',
                 dishes:[
-                    {
+                    {   category: 'Белорусская кухня',
                         dish: 'Мачанка',
                         price: '9.99 руб',
                         weight: '420г',
@@ -300,6 +305,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 11:00 до 20:00',
         cuisines: [{cuisine: 'Американская кухня',
                 dishes: [{
+                    category: 'Американская кухня',
                     dish: 'Медовик',
                     price: '7.50 руб',
                     weight: '120г',
@@ -311,7 +317,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Европейская кухня',
                 dishes: [
-                    {
+                    {   category: 'Европейская кухня',
                         dish: 'Сэндвич с тунцом',
                         price: '13 руб',
                         weight: '170г',
@@ -335,6 +341,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 12:00 до 22:30',
         cuisines: [{cuisine: 'Европейская кухня',
                 dishes: [{
+                    category: 'Европейская кухня',
                     dish: 'Салат с жареной моцареллой',
                     price: '16 руб',
                     weight: '250г',
@@ -346,7 +353,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Итальянская кухня',
                 dishes: [
-                    {
+                    {   category: 'Итальянская кухня',
                         dish: 'Пенне с жюльеном',
                         price: '13 руб',
                         weight: '350г',
@@ -370,6 +377,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 10:00 до 21:30',
         cuisines: [{cuisine: 'Итальянская кухня',
                 dishes: [{
+                    category: 'Итальянская кухня',
                     dish: 'Пицца Четыре сезона',
                     price: '14.50 руб',
                     weight: '550г',
@@ -381,7 +389,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Китайская кухня',
                 dishes: [
-                    {
+                    {   category: 'Китайская кухня',
                         dish: 'Гедза',
                         price: '10 руб',
                         weight: '220г',
@@ -393,7 +401,7 @@ const descriptionRestraurants = [
             {
                 cuisine: 'Японская кухня',
                 dishes:[
-                    {
+                    {   category: 'Японская кухня',
                         dish: 'Спринг Ролл с креветками',
                         price: '12 руб',
                         weight: '220г',
@@ -416,6 +424,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 12:00 до 22:30',
         cuisines: [{cuisine: 'Японская кухня',
                 dishes: [{
+                    category: 'Японская кухня',
                     dish: 'Сет Мураками',
                     price: '39 руб',
                     weight: '660г',
@@ -439,6 +448,7 @@ const descriptionRestraurants = [
         schedule: 'Время работы с 10:00 до 22:30',
         cuisines: [{cuisine: 'Итальянская кухня',
                 dishes: [{
+                    category: 'Итальянская кухня',
                     dish: 'Пицца 5 Сыров 30см',
                     price: '17.90 руб',
                     weight: '530г',
@@ -449,6 +459,7 @@ const descriptionRestraurants = [
             },
             {   cuisine: 'Японская кухня',
                 dishes: [{
+                    category: 'Японская кухня',
                     dish: 'Сет Ассорти',
                     price: '54.90 руб',
                     weight: '1490г',

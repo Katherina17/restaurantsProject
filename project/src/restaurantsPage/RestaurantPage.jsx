@@ -10,12 +10,6 @@ function RestaurantPage(props){
     const {id} = useParams();
     let currentRestaurant = DescriptionRestraurants.find(item => item.id === id);
 
-    let renderCuisine = currentRestaurant.cuisines.map(item =>{
-        return (
-            <p key={item.cuisine}> {item['cuisine']}</p>
-        )
-    })
-
     if (currentRestaurant === undefined) {
         return(
             <div>error</div>
@@ -33,7 +27,7 @@ function RestaurantPage(props){
                                     delivery = {currentRestaurant.delivery}
                                     rate = {currentRestaurant.rate}
                                     timeWork = {currentRestaurant.schedule}
-                                    cuisine = {renderCuisine}
+                                    cuisines = {currentRestaurant.cuisines}
                                     />
                         <DishList cuisines={currentRestaurant.cuisines}/>
                     </div>

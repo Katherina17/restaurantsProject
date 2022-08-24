@@ -3,7 +3,6 @@ import Button from '../ui/Button.jsx';
 
 function DishItem(props){
     let dish = props.dish;
-
     return(
         <div className='dishContainer'>
             <div className='dishDesc'>

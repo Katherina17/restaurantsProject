@@ -120,13 +120,9 @@
 
 .typeOfCuisine p:hover{
     cursor: pointer;
-    background-color: #918b8b47;
+    background-color: #eee;
     border-radius: 1rem;  
-}
-
-.typeOfCuisine.active{
-    background-color: #918b8b47;
-    border-radius: 1rem; 
+    transition: all ease-in-out 0.4s;
 }
 
 
@@ -135,6 +131,11 @@
     font-size: 16px;
     font-family: arial, serif;
     padding: 0.4rem;
+}
+
+p.active{
+    border-radius: 1rem;
+    background-color: #eee;
 }
 
 @media(max-width: 887px){

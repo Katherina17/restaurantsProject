@@ -85,9 +85,6 @@ function RestraurantsList(props){
         let restsFilteredByTimeAndCuisines = filterRestraunts(restsFilteredByTime);
         setRests(restsFilteredByTimeAndCuisines);
     }
-
-  
-
     return(
         <section>
             <div className='RestraurantsList'>
