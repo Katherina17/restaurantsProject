@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const dishSlice = createSlice({
     name: 'dishes',
     initialState: {
-        dishState: ' '
+        dishState: ''
     },
     reducers: {
         changeDishState(state, action){

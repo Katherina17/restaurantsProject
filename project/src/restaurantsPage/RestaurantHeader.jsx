@@ -5,14 +5,15 @@ import {ThemeProvider} from '@mui/material/styles';
 import theme from '../header/nav/CreateTheme.js';
 import {useSelector, useDispatch} from 'react-redux';
 import { changeDishState } from '../redux/dishSlice';
-import { style } from '@mui/system';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function RestaurantHeader(props){
     let dispatch = useDispatch();
     let stateDish = useSelector(state => state.dishes.dishState);
     let [active, setActive] = useState(-1);
-
+    useEffect(() => {
+        return () => dispatch(changeDishState(''))
+    }, []);
     return (
         <ThemeProvider theme={theme}>
               <div className='container'>
@@ -43,7 +44,20 @@ function RestaurantHeader(props){
                     <div className='typeOfCuisine'>
                         {props.cuisines.map((item, i) => {
                             return(
-                                <p className={active == i ? 'active' : ''} onClick = {(event) => {dispatch(changeDishState(event.target.innerText)); setActive(i)}} key={item.cuisine}>{item['cuisine']} </p>
+                                <p className={active === i ? 'active' : ''} 
+                                    onClick = {(event) => {
+                                        if(stateDish === event.target.innerText){
+                                            setActive(-1);
+                                            dispatch(changeDishState(''));
+                                        } 
+                                        else {
+                                            dispatch(changeDishState(event.target.innerText)); 
+                                            setActive(i);
+                                        }
+                                    }} 
+                                    key={item.cuisine}>
+                                    {item['cuisine']} 
+                                </p>
                             );
                         })}
                     </div>

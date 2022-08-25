@@ -1,6 +1,6 @@
 import './Cuisine.css';
 import Button from '../../ui/Button.jsx';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {filterCuisines} from '../../redux/cuisineSlice.js';
 import CheckBox from './CheckBox';
 import { useState } from 'react';
@@ -17,17 +17,8 @@ const cuisines = [
 ];
 
 function Cuisine(props){
-    let [currentCuisines, setCuisines] = useState([]);
-    let dispatch = useDispatch();
-
-    function addOrRemoveCuisine(cuisine) {
-        if(currentCuisines.find(c => c === cuisine)){
-            setCuisines(currentCuisines.filter(c => c !== cuisine))
-        } else {
-            setCuisines(currentCuisines.concat(cuisine))
-        }
-    }
-
+    let activeCuisines = useSelector(state => state.cuisine.cuisines);
+   
     return(
         <section className="cuisine-list">
             <div style={{position: 'sticky', top: '70px'}}>
@@ -37,14 +28,14 @@ function Cuisine(props){
                     <CheckBox {...item}
                             name={item.name.toUpperCase()}
                             key = {item.id}
-                            addOrRemoveCuisine={addOrRemoveCuisine}/>
+                            />
                     )
                 })}
                 <div id='AcceptBtn'>
-                    <Button style={{height: 32 + 'px', width: 89 + '%',}} onClick={() => {
+                    {/* <Button style={{height: 32 + 'px', width: 89 + '%',}} onClick={() => {
                         dispatch(filterCuisines(currentCuisines));
                         if(props.removePopUp) props.removePopUp();
-                    }}>ПРИМЕНИТЬ</Button>
+                    }}>ПРИМЕНИТЬ</Button> */}
                 </div>
             </div>
     </section>

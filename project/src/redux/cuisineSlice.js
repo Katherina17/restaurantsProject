@@ -7,7 +7,12 @@ const cuisineSlice = createSlice({
     },
     reducers: {
         filterCuisines(state, action){
-            state.cuisines = action.payload;
+            if(state.cuisines.find(c => c === action.payload)){
+                state.cuisines = state.cuisines.filter( c => c !== action.payload)
+            } else{
+                state.cuisines.push(action.payload)
+            }
+
         }
     }
 
