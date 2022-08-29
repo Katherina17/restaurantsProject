@@ -1,5 +1,5 @@
 import './DishItem.css';
-import Button from '../ui/Button.jsx';
+import Button from '../../ui/Button.jsx';
 
 function DishItem(props){
     let dish = props.dish;

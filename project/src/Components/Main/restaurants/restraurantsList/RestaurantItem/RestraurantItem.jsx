@@ -2,7 +2,7 @@ import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import {ThemeProvider} from '@mui/material/styles';
 import {Link} from "react-router-dom";
-import theme from '../../../header/nav/CreateTheme.js';
+import theme from '../../../../Header/Nav/CreateTheme.js';
 import './RestraurantItem.css';
 
 

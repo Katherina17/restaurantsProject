@@ -1,8 +1,8 @@
 import Button from "../../../ui/Button.jsx"
 import "./Filter.css";
 import {useDispatch} from 'react-redux';
-import {setTime} from '../../../redux/timeSlice';
-import { changePopUpState } from "../../../redux/popUpSlice.js";
+import {setTime} from '../../../../redux/timeSlice';
+import { changePopUpState } from "../../../../redux/popUpSlice.js";
 import { useSelector } from "react-redux";
 import {useEffect} from 'react';
 

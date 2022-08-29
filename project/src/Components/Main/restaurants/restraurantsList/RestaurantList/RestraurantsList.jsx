@@ -1,6 +1,6 @@
-import descriptionRestraurants from './DescriptionRestraurants.js';
-import '../restraurantsList/RestraurantsList.css';
-import RestraurantItem from './RestraurantItem.jsx';
+import descriptionRestraurants from '../DescriptionRestraurants.js';
+import './RestraurantsList.css';
+import RestraurantItem from '../RestaurantItem/RestraurantItem.jsx';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useEffect } from 'react';

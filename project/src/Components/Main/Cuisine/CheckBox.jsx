@@ -1,7 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { filterCuisines } from "../../redux/cuisineSlice";
-import { useState } from "react";
-
+import { useDispatch} from "react-redux";
+import { filterCuisines } from "../../../redux/cuisineSlice";
 
 function CheckBox({id, name}){
     let dispatch = useDispatch();

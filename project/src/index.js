@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
-import Main from './main/Main';
-import RestaurantPage from './restaurantsPage/RestaurantPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Main from './Components/Main/Main';
+import RestaurantPage from './Components/restaurantsPage/RestaurantPage';
 import Layout from './Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

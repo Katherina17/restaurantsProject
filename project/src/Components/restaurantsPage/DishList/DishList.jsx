@@ -1,7 +1,6 @@
-import DishItem from "./DishItem";
+import DishItem from "../DishItem/DishItem";
 import './DishList.css';
 import { useSelector} from "react-redux";
-import { useState } from "react";
 
 function DishList(props){
     let dishState = useSelector(state => state.dishes.dishState);

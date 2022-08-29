@@ -1,10 +1,5 @@
 import './Cuisine.css';
-import Button from '../../ui/Button.jsx';
-import { useDispatch, useSelector } from 'react-redux';
-import {filterCuisines} from '../../redux/cuisineSlice.js';
 import CheckBox from './CheckBox';
-import { useState } from 'react';
-
 
 const cuisines = [
     {id: 'asian', name: 'АЗИАТСКАЯ КУХНЯ'},
@@ -16,9 +11,7 @@ const cuisines = [
     {id: 'japanese', name: 'Японская кухня'}
 ];
 
-function Cuisine(props){
-    let activeCuisines = useSelector(state => state.cuisine.cuisines);
-   
+function Cuisine(){   
     return(
         <section className="cuisine-list">
             <div style={{position: 'sticky', top: '70px'}}>
@@ -31,12 +24,6 @@ function Cuisine(props){
                             />
                     )
                 })}
-                <div id='AcceptBtn'>
-                    {/* <Button style={{height: 32 + 'px', width: 89 + '%',}} onClick={() => {
-                        dispatch(filterCuisines(currentCuisines));
-                        if(props.removePopUp) props.removePopUp();
-                    }}>ПРИМЕНИТЬ</Button> */}
-                </div>
             </div>
     </section>
     )

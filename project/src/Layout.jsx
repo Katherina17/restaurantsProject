@@ -1,7 +1,7 @@
-import Header from './header/Header';
+import Header from './Components/Header/Header'
 import { Outlet } from 'react-router-dom';
-import Main from './main/Main';
-import Footer from './footer/Footer';
+import Main from './Components/Main/Main';
+import Footer from './Components/Footer/Footer';
 import {Provider} from 'react-redux';
 import store from './redux/index.js';
 

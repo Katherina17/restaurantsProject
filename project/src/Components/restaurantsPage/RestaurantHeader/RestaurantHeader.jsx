@@ -2,9 +2,9 @@ import './RestaurantHeader.css';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import {ThemeProvider} from '@mui/material/styles';
-import theme from '../header/nav/CreateTheme.js';
+import theme from '../../Header/Nav/CreateTheme.js';
 import {useSelector, useDispatch} from 'react-redux';
-import { changeDishState } from '../redux/dishSlice';
+import { changeDishState } from '../../../redux/dishSlice';
 import { useState, useEffect } from 'react';
 
 function RestaurantHeader(props){

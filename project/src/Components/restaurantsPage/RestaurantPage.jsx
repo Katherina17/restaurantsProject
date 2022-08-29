@@ -1,9 +1,9 @@
 import './RestaurantPage.css';
 import { useParams} from 'react-router-dom';
-import DescriptionRestraurants from '../main/restaurants/restraurantsList/DescriptionRestraurants.js';
-import RestaurantHeader from './RestaurantHeader.jsx';
-import DishList from './DishList';
-import Basket from './Basket';
+import DescriptionRestraurants from '../Main/restaurants/restraurantsList/DescriptionRestraurants.js';
+import RestaurantHeader from '../restaurantsPage/RestaurantHeader/RestaurantHeader';
+import DishList from '../restaurantsPage/DishList/DishList';
+import Basket from '../restaurantsPage/Basket/Basket';
 
 
 function RestaurantPage(props){

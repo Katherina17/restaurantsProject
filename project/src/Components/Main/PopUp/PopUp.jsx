@@ -1,7 +1,7 @@
 import './PopUp.css';
 import { useSelector, useDispatch } from 'react-redux';
 import CloseIcon from '@mui/icons-material/Close';
-import { changePopUpState } from '../../redux/popUpSlice';
+import { changePopUpState } from '../../../redux/popUpSlice';
 
 
 function PopUp(props){

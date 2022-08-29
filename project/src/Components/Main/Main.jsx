@@ -1,9 +1,9 @@
-import Cuisine from './cuisine/Cuisine.jsx';
+import Cuisine from './Cuisine/Cuisine';
 import './Main.css';
-import Filter from './restaurants/filter/Filter.jsx';
-import RestraurantsList from './restaurants/restraurantsList/RestraurantsList.jsx';
-import Paginations from './pagination/Pagination.jsx';
-import PopUp from './popUp/PopUp.jsx';
+import Filter from './restaurants/Filter/Filter.jsx';
+import RestraurantsList from './restaurants/restraurantsList/RestaurantList/RestraurantsList.jsx';
+import Paginations from './Pagination/Pagination.jsx';
+import PopUp from './PopUp/PopUp.jsx';
 
 
 

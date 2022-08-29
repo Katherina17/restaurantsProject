@@ -1,7 +1,7 @@
 import './Basket.css';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import {ThemeProvider} from '@mui/material/styles';
-import theme from '../header/nav/CreateTheme';
+import theme from '../../Header/Nav/CreateTheme';
 
 function Basket(){
     return(
