@@ -3,14 +3,10 @@ import './Main.css';
 import Filter from './restaurants/Filter/Filter.jsx';
 import RestraurantsList from './restaurants/restraurantsList/RestaurantList/RestraurantsList.jsx';
 import Paginations from './Pagination/Pagination.jsx';
-import PopUp from './PopUp/PopUp.jsx';
-
-
 
 function Main(){
     return(
         <main className='mainHomePage'>
-            <PopUp innerRender={(props) => <Cuisine {...props}/>}/>
             <div className='wrapper mainContainer'>
                 <Cuisine/>
                 <div style={{width: 100 + '%'}}>

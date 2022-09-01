@@ -13,8 +13,6 @@
 }
 
 .modal-window{
-    height: 33rem;
-    width: 72%;
     background-color: white;
     cursor: pointer;
     align-items: center;
@@ -24,7 +22,7 @@
     flex-direction: column;
 }
 
-.modal-window > div{
+/* .modal-window > div{
     position: relative;
     z-index: 101;
     left: 274px;
@@ -36,30 +34,11 @@
     align-items: center;
     width: 3rem;
     height: 3rem;
-}
+} */
 
 .modal-window > div:hover{
     background-color: #fbf8f8b8;
     transition: 0.3s all ease-in-out;
-}
-
-.modal-window > .cuisine-list{
-    display: flex;
-    width: auto;
-    margin-right: 0;
-}
-
-.modal-window > .cuisine-list h2{
-    font-size: 20px;
-    padding: 0;
-}
-
-.modal-window > .cuisine-list > .cuisine-item{
-    margin: 19px;
-}
-
-.modal-window > .cuisine-list > .cuisine-item label{
-    font-size: 15px;
 }
 
 @media(max-width: 649px){

@@ -1,5 +1,6 @@
 import './Cuisine.css';
 import CheckBox from './CheckBox';
+import { useSelector } from 'react-redux';
 
 const cuisines = [
     {id: 'asian', name: 'АЗИАТСКАЯ КУХНЯ'},
@@ -11,7 +12,7 @@ const cuisines = [
     {id: 'japanese', name: 'Японская кухня'}
 ];
 
-function Cuisine(){   
+function Cuisine(){
     return(
         <section className="cuisine-list">
             <div style={{position: 'sticky', top: '70px'}}>
