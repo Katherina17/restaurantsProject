@@ -1,85 +1,20 @@
 .popUpContainer{
+    display: flex;
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
     z-index: 100;
     background-color: #000000a1;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
 }
 
-.modal-window{
-    background-color: white;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border-radius: 1rem;
-    flex-direction: column;
+.popUpContainer.active{
+    opacity: 1;
 }
 
-/* .modal-window > div{
-    position: relative;
-    z-index: 101;
-    left: 274px;
-    top: -7rem;
-    background-color: white;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-} */
 
-.modal-window > div:hover{
-    background-color: #fbf8f8b8;
-    transition: 0.3s all ease-in-out;
-}
-
-@media(max-width: 649px){
-    .modal-window > div{
-        left: 258px;
-    }
-}
-
-@media(max-width: 598px){
-    .modal-window > div{
-        left: 230px;
-    }
-}
-
-@media(max-width: 526px){
-    .modal-window > div{
-        left: 207px;
-    }
-}
-
-@media(max-width: 484px){
-    .modal-window > div{
-        left: 183px;
-    }
-}
-
-@media(max-width: 429px){
-    .modal-window > div{
-        left: 160px;
-        top: -7.5rem;
-    }
-}
-
-@media(max-width: 375px){
-    .modal-window > div{
-        left: 143px;
-    }
-}
-
-@media(max-width: 375px){
-    .modal-window > div{
-        left: 123px;
-    }
-}

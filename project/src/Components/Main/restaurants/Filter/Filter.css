@@ -22,32 +22,40 @@
     display: none;
 }
 
-.modal-window > div:hover{
-    background-color: #fbf8f8b8;
-    transition: 0.3s all ease-in-out;
-}
-
-.modal-window{
+#cuisine-Modal-Window{
     width: 80%;
+    background-color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
 }
 
-.modal-window > .cuisine-list{
+
+#cuisine-Modal-Window > .cuisine-list{
+    display: flex;
+}
+
+
+#cuisine-Modal-Window > .cuisine-list{
     display: flex;
     margin-right: 0;
     padding: 1rem 0;
     width: auto;
 }
 
-.modal-window > .cuisine-list h2{
+#cuisine-Modal-Window > .cuisine-list h2{
     font-size: 20px;
     padding: 0;
 }
 
-.modal-window > .cuisine-list > .cuisine-item{
+#cuisine-Modal-Window > .cuisine-list > .cuisine-item{
     margin: 19px;
 }
 
-.modal-window > .cuisine-list > .cuisine-item label{
+#cuisine-Modal-Window > .cuisine-list > .cuisine-item label{
     font-size: 15px;
 }
 

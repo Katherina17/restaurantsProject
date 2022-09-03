@@ -1,1 +1,195 @@
+.formsContainer{
+    padding: 3rem;
+    min-width: 500px;
+    height: 60vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.signUpForm, .registrationForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.closedBtnContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#closedBtn{
+    background-color: white;
+    padding: 0.5rem;
+}
+
+#closedBtn svg{
+    font-size: 27px;
+}
+
+#closedBtn:hover{
+   background-color: #191a1a15;
+   cursor: pointer;
+   border-radius: 50%;
+}
+
+.logInOrSignUp{
+    width: 85%;
+    display: flex;
+    font-size: 25px;
+    font-family: Montserrat, sans-serif;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 8rem;
+}
+
+.logInOrSignUp h2{
+    cursor: pointer;
+}
+
+.activeBtn::after{
+    content: '';
+    border-bottom: 2px #e4aa1eeb solid;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.logInOrSignUp h2:hover:after{
+    content: '';
+    border-bottom: 2px #e4a91e83 solid;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.logInContainer, .SingUpContainer{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.logIn, .SingUp{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.logIn input, .SingUp input{
+    padding: 0.5rem;
+    border-bottom: 2px rgba(0, 0, 0, 0.309) solid;
+    font-size: 17px;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.06rem;
+    color: #191a1ae0;
+    margin-bottom: 8px;
+}
+
+.logIn input:focus, .SingUp input:focus{
+    border-bottom: 2px rgba(0, 0, 0, 0.744) solid;
+    transition: all 0.2s ease-in;
+}
+
+.logIn input::placeholder, .SingUp input::placeholder{
+    color: rgba(3, 3, 3, 0.383);
+}
+
+.SingUpContainer button, .logInContainer button{
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffb915;
+}
+
+.SingUpContainer button:hover, .logInContainer button:hover{
+    transform: scale(1.02);
+}
+
+.formsContainer button span{
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+}
+
+@media(max-width: 630px){
+    .formsContainer{
+        min-width: 80%;  
+        height: 59vh;
+    }
+
+    .logInOrSignUp{
+        font-size: 20px;
+        margin-bottom: 5rem;    
+    }
+
+    .logIn input, .SingUp input{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .formsContainer button span{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 450px){
+    .formsContainer{
+        min-width: 80%;  
+        height: 54vh;
+    }
+
+    .logInOrSignUp{
+        font-size: 15px;
+        margin-bottom: 3rem;    
+    }
+
+    .logIn input, .SingUp input{
+        font-size: 12px;
+    }
+
+    .formsContainer button span{
+        font-size: 12px;
+    }
+
+    .formsContainer button{
+        padding: 0.5rem;
+    }
+
+    #closedBtn svg{
+        font-size: 20px;
+    }
+
+    #closedBtn{
+        position: relative;
+        bottom: -11px;
+        left: 11px;
+    }
+}
+
+@media(max-width: 360px){
+
+    .logInOrSignUp{
+        font-size: 13px;
+    }
+
+    .logIn input, .SingUp input{
+        font-size: 10px;
+    }
+
+    .formsContainer button span{
+        font-size: 10px;
+    }
+
+    .formsContainer button{
+        padding: 0.3rem;
+    }
+
+    #closedBtn svg{
+        font-size: 16px;
+    }
+
+    #closedBtn{
+        bottom: -5px;
+    }
+}
+
 

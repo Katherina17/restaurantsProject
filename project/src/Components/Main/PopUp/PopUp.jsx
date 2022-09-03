@@ -1,28 +1,27 @@
 import './PopUp.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { changePopUpState } from '../../../redux/popUpSlice';
+import { useEffect, useState } from 'react';
 
 
-function PopUp({children, ...props}){
-    let setPopUp = useSelector(state => state.popUp.popUpState);
-    let dispatch = useDispatch();
-
-    function removePopUp(){
-        if(setPopUp){
-            dispatch(changePopUpState(false));
-            props.changeStateCuisine(false)
-        } 
-    }
-
+function PopUp({children, removePopUp, ...props}){
     function onEmptyAreaClick(e) {
-        if(e.target.className === "popUpContainer") removePopUp();
+        if(e.target.className === "popUpContainer" || e.target.className === "popUpContainer active" ) removePopUp();
     }
+
+    let[isActive, setActive] = useState(false)
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        setActive(true)
+        return () => {
+            document.body.style.overflow = "visible";
+            setActive(false)
+        }
+    }, [])
 
     return(
-        <div className="popUpContainer" style={{display: setPopUp ? 'flex' : 'none'}} onClick={onEmptyAreaClick}>
-            <div className="modal-window">
+        <div className={ isActive ? 'popUpContainer active' : 'popUpContainer'}
+            onClick={onEmptyAreaClick}>
                 {children}
-            </div>
         </div>
     )
 }
